@@ -24,5 +24,25 @@ namespace KDZVershinin3
         {
             InitializeComponent();
         }
+
+        List<Game> _games = new List<Game>();
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            int age;
+            if (int.TryParse(textBox1.Text, out age))
+            {
+
+                var game = new Game(textBox.Text,
+                    age);
+
+                _games.Add(game);
+                textBox.Text = "";
+                textBox1.Text = "";
+
+            }
+            else
+                MessageBox.Show("Неверно введены данные");
+        }
     }
 }

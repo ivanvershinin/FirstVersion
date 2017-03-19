@@ -1,12 +1,21 @@
-﻿<Window x:Class="KDZVershinin3.MainWindow"
+﻿<Window x:Name="Мои_игры1" x:Class="KDZVershinin3.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KDZVershinin3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="Мои игры" Height="233.333" Width="526.515">
+    <Grid x:Name="Мои_игры" Margin="0,0,31.4,0" Height="191" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="449*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="20,44,0,0" TextWrapping="Wrap" Text="Название игры" VerticalAlignment="Top" Height="29" Width="149" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="91.2,42,0,0" TextWrapping="Wrap" Text="Введите название" VerticalAlignment="Top" Width="314"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="20,108,0,0" TextWrapping="Wrap" Text="Возрастное ограничение" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="149"/>
+        <TextBox x:Name="textBox1" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="124.2,105,0,0" TextWrapping="Wrap" Text="Введите возраст" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button" Content="Add" Grid.Column="1" HorizontalAlignment="Left" Margin="150.2,159,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+
     </Grid>
 </Window>
